@@ -54,6 +54,9 @@ void printArray(int arr[], int size)
     cout << endl;
 }
 
+
+//funcion agregada del codigo de labo
+//aca resuelvo el ejercicio
 int missingNumber(){
     int t;
     cin >> t;
