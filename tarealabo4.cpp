@@ -2,8 +2,11 @@
 //missing number usando quicksort
 //Esther Lara
 
+#include <iostream>
+
+
 #include <cstdlib>
-#include <stdc++.h>
+//#include <stdc++.h>
 using namespace std;
 
 void swap(int* a, int* b)
@@ -51,11 +54,29 @@ void printArray(int arr[], int size)
     cout << endl;
 }
 
-int main(int argc, char** argv) {
-    int arr[] = {10, 7, 8, 9, 1, 5};
-    int n = sizeof(arr) / sizeof(arr[0]);
-    quickSort(arr, 0, n - 1);
-    cout << "Sorted array: \n";
-    printArray(arr, n);
+int missingNumber(){
+    int t;
+    cin >> t;
+    while(t--){
+        int n;
+        cin >> n;
+        int A[n];
+        for (int i=0;i<n;i++)
+            cin >> A[i];
+        quickSort(A, 0, n);
+        int multiplexor=2;
+        for (int i=0;i<n;i++)
+        {
+            if (A[i]>=multiplexor)
+            {
+                multiplexor+=2;
+            }
+        }
+        cout << multiplexor;
+    }
     return 0;
+}
+
+int main(int argc, char** argv) {
+    missingNumber();
 }
